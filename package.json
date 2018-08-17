@@ -1,0 +1,36 @@
+{
+  "name": "url-expander",
+  "version": "0.0.1",
+  "description": "URL exctractor that support multiple services",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kozakvoj/url-expander.git"
+  },
+  "keywords": [
+    "goo.gl",
+    "bit.ly",
+    "tinyurl"
+  ],
+  "author": "Vojtech Kozak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kozakvoj/url-expander/issues"
+  },
+  "homepage": "https://github.com/kozakvoj/url-expander#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
