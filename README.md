@@ -1,6 +1,6 @@
 # URL Expander
 
-URL expander with multiple supported shorteners. Currently, these shorteners are supported:
+Promise based URL expander with multiple supported shorteners. Currently, these shorteners are supported:
 
 - Goo.gl
 - Bit.ly
@@ -20,10 +20,10 @@ const tinyurl = expander.tinyurl();
 
 const expand = expander.createExpand([googl, bitly, tinyurl]);
 
-expand("http://bit.ly/gQUgaI"); // -> http://bit.ly/bundles/kozakvoj/1
-expand("https://goo.gl/2gj8kB"); // -> http://www.vojtechkozak.cz
-expand("https://tinyurl.com/ycc4x7hn"); // -> https://www.vojtechkozak.cz;
-expand("https://www.google.com"); // -> https://www.google.com;
+expand("http://bit.ly/gQUgaI"); // -> Promise -> http://bit.ly/bundles/kozakvoj/1
+expand("https://goo.gl/2gj8kB"); // -> Promise -> http://www.vojtechkozak.cz
+expand("https://tinyurl.com/ycc4x7hn"); // -> Promise -> https://www.vojtechkozak.cz;
+expand("https://www.google.com"); // -> Promise -> https://www.google.com;
 ```
 
 ### Example 2
@@ -32,6 +32,6 @@ Use only one shortener.
 ```javascript
 const googl = expander.googl("INSERT_API_KEY");
 
-googl("https://goo.gl/2gj8kB"); // -> http://www.vojtechkozak.cz
-googl("http://bit.ly/gQUgaI"); // -> http://bit.ly/gQUgaI
+googl("https://goo.gl/2gj8kB"); // -> Promise -> http://www.vojtechkozak.cz
+googl("http://bit.ly/gQUgaI"); // -> Promise -> http://bit.ly/gQUgaI
 ```
