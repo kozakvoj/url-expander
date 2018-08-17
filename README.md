@@ -6,9 +6,9 @@ URL expander with multiple supported shorteners. Currently, these shorteners are
 - Bit.ly
 - Tinyurl.com
 
-##Examples 
+## Examples 
 
-###Example 1
+### Example 1
 Create expand function with multiple shorteners. All other urls will return the same value.
 
 ```javascript
@@ -26,7 +26,7 @@ expand("https://tinyurl.com/ycc4x7hn"); // -> https://www.vojtechkozak.cz;
 expand("https://www.google.com"); // -> https://www.google.com;
 ```
 
-###Example 2
+### Example 2
 Use only one shortener.
 
 ```javascript
