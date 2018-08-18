@@ -1,6 +1,8 @@
 # URL Expander
 
-Promise based URL expander for Node with multiple supported shorteners. Currently, these shorteners are supported:
+Promise based URL expander for Node with multiple supported shorteners. Wherever possible it uses API provided by shortener services. This way you can achieve the best performance result.
+ 
+Currently, these shorteners are supported:
 
 - Goo.gl - using API
 - Bit.ly - using API
