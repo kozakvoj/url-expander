@@ -1,10 +1,10 @@
 # URL Expander
 
-Promise based URL expander with multiple supported shorteners. Currently, these shorteners are supported:
+Promise based URL expander for Node with multiple supported shorteners. Currently, these shorteners are supported:
 
-- Goo.gl
-- Bit.ly
-- Tinyurl.com
+- Goo.gl - using API
+- Bit.ly - using API
+- Tinyurl.com - using scrapping from tinyurl.com preview page
 
 ## Examples 
 
@@ -44,6 +44,6 @@ GOOGL_API_KEY=
 BITLY_API_KEY=
  ```
  
- Then execute npm test.
+Then execute npm test.
  
  
