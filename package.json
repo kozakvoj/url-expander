@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./node_modules/mocha/bin/mocha  --recursive ./test/"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "ramda": "^0.25.0"
   },
   "devDependencies": {
+    "dotenv": "^6.0.0",
     "mocha": "^5.2.0"
   }
 }

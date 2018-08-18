@@ -1,5 +1,7 @@
 'use strict';
 
+require("./../init");
+
 const describe = require("mocha").describe;
 const it = require("mocha").it;
 const assert = require("assert");

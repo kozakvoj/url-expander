@@ -1,10 +1,12 @@
 'use strict';
 
+require("./../init");
+
 const describe = require("mocha").describe;
 const it = require("mocha").it;
 const assert = require("assert");
 
-const googl = require("../../lib/shorteners/googl")("key");
+const googl = require("../../lib/shorteners/googl")(process.env.GOOGL_API_KEY);
 
 describe("goo.gl", () => {
     it("should resolve to long url", async () => {
