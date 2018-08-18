@@ -1,6 +1,6 @@
 # URL Expander
 
-Promise based URL expander for Node with multiple supported shorteners. Wherever possible it uses API provided by shortener services. This way you can achieve the best performance result.
+Promise based URL expander for Node with multiple supported shorteners. Wherever possible it uses API provided by shortener services. This way you can achieve the best performance results (It might be about 3x faster then reading redirects).
  
 Currently, these shorteners are supported:
 
