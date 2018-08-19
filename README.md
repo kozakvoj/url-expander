@@ -52,7 +52,7 @@ expand("https://www.google.com"); // -> Promise -> https://www.google.com;
 ```
 
 ### Example 2
-Use only one shortener.
+Use only one shortener service.
 
 ```javascript
 const expander = require("url-expander");
