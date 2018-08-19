@@ -14,7 +14,8 @@ Currently, these shorteners are supported:
 - Goo.gl - using API
 - Bit.ly - using API
 - Seomafia.net - using API
-- is.gd - using API
+- Is.gd - using API
+- Tiny.cc - using API
 - Tinyurl.com - using scrapping from tinyurl.com preview page
 
 These shorteners are recognized: 
@@ -77,6 +78,8 @@ Then execute npm test.
 ## Reference
 - goo.gl API reference: https://developers.google.com/url-shortener/v1/getting_started
 - bit.ly API reference: https://dev.bitly.com/links.html
+- seomafia.net API reference: http://seomafia.net/developer.html
+- is.gd API reference: https://is.gd/apishorteningreference.php
 - tiny.cc API reference: https://tiny.cc/api-docs
  
  
