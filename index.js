@@ -1,8 +1,13 @@
 'use strict';
 
+const R = require("ramda");
+
 const googl = require("./lib/shorteners/googl");
 const bitly = require("./lib/shorteners/bitly");
 const tinyurl = require("./lib/shorteners/tinyurl");
+const url = require("url");
+
+const containsShorteners = (shortnenerList, testUrl) => R.find(shortener => url.parse(testUrl).hostname === shortener, shortnenerList) !== undefined;
 
 function createExpand(expanders) {
     const _expanders = expanders;
@@ -18,7 +23,10 @@ function createExpand(expanders) {
     }
 }
 
+
 module.exports = {
+    isMaliciousShortener: url => containsShorteners(require("./resources/maliciousShorteners"), url),
+    isSafeShortener: url => containsShorteners(require("./resources/safeShorteners"), url),
     createExpand,
     shorteners: {
         googl, bitly, tinyurl
