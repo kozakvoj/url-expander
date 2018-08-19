@@ -47,5 +47,9 @@ BITLY_API_KEY=
  ```
  
 Then execute npm test.
+
+## Reference
+- goo.gl API reference: https://developers.google.com/url-shortener/v1/getting_started
+- bit.ly API reference: https://dev.bitly.com/links.html
  
  
