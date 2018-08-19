@@ -1,12 +1,29 @@
 # URL Expander
 
-Promise based URL expander for Node with multiple supported shorteners. Wherever possible it uses API provided by shortener services. This way you can achieve the best performance results (It might be about 3x faster then reading redirects).
- 
+Promise based URL expander for Node with multiple supported shorteners.
+
+Core principles:
+
+1) Prefer API - Wherever possible use API provided by shortener services. This way, the best performance can be achieved (It might be about 3x faster then reading redirects).
+2) Expand only shorteners that are considered to be safe - Shorteners where people can earn money or hide sexually explicit websites will not be expanded but automatically marked as potentially harmful.
+
+This expander can be best used for user generated content validation together with other tools.
+
 Currently, these shorteners are supported:
 
 - Goo.gl - using API
 - Bit.ly - using API
 - Tinyurl.com - using scrapping from tinyurl.com preview page
+
+These shorteners are recognized: 
+- potentially harmful: https://github.com/kozakvoj/url-expander/blob/master/resources/maliciousShorteners.json
+- considered to be safe: https://github.com/kozakvoj/url-expander/blob/master/resources/safeShorteners.json
+
+## Installing
+Using npm:
+```
+npm install url-expander
+```
 
 ## Examples 
 
@@ -32,6 +49,8 @@ expand("https://www.google.com"); // -> Promise -> https://www.google.com;
 Use only one shortener.
 
 ```javascript
+const expander = require("url-expander");
+
 const googl = expander.googl("INSERT_API_KEY");
 
 googl("https://goo.gl/2gj8kB"); // -> Promise -> http://www.vojtechkozak.cz
