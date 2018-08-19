@@ -13,6 +13,7 @@ Currently, these shorteners are supported:
 
 - Goo.gl - using API
 - Bit.ly - using API
+- Seomafia.net - using API
 - Tinyurl.com - using scrapping from tinyurl.com preview page
 
 These shorteners are recognized: 
@@ -36,8 +37,9 @@ const expander = require("url-expander");
 const googl = expander.googl("INSERT_API_KEY");
 const bitly = expander.bitly("INSERT_API_KEY");
 const tinyurl = expander.tinyurl();
+const seomafia = expander.seomafia();
 
-const expand = expander.createExpand([googl, bitly, tinyurl]);
+const expand = expander.createExpand([googl, bitly, tinyurl, seomafia]);
 
 expand("http://bit.ly/gQUgaI"); // -> Promise -> http://bit.ly/bundles/kozakvoj/1
 expand("https://goo.gl/2gj8kB"); // -> Promise -> http://www.vojtechkozak.cz

@@ -5,6 +5,7 @@ const R = require("ramda");
 const googl = require("./lib/shorteners/googl");
 const bitly = require("./lib/shorteners/bitly");
 const tinyurl = require("./lib/shorteners/tinyurl");
+const seomafia = require("./lib/shorteners/seomafia");
 const url = require("url");
 
 const containsShorteners = (shortnenerList, testUrl) => R.find(shortener => url.parse(testUrl).hostname === shortener, shortnenerList) !== undefined;
@@ -29,6 +30,6 @@ module.exports = {
     isSafeShortener: url => containsShorteners(require("./resources/safeShorteners"), url),
     createExpand,
     shorteners: {
-        googl, bitly, tinyurl
+        googl, bitly, tinyurl, seomafia
     }
 };
