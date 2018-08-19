@@ -40,8 +40,9 @@ const bitly = expander.bitly("INSERT_API_KEY");
 const tinyurl = expander.tinyurl();
 const seomafia = expander.seomafia();
 const isgd = expander.isgd();
+const tinycc = expander.tinyurl("INSERT_LOGIN", "INSET_API_KEY");
 
-const expand = expander.createExpand([googl, bitly, tinyurl, seomafia, isgd]);
+const expand = expander.createExpand([googl, bitly, tinyurl, seomafia, isgd, tinycc]);
 
 expand("http://bit.ly/gQUgaI"); // -> Promise -> http://bit.ly/bundles/kozakvoj/1
 expand("https://goo.gl/2gj8kB"); // -> Promise -> http://www.vojtechkozak.cz
@@ -67,6 +68,8 @@ In order to test the expander, you have to crate a .env file inside /test direct
  ```
 GOOGL_API_KEY=
 BITLY_API_KEY=
+TINYCC_API_KEY=
+TINYCC_API_LOGIN=
  ```
  
 Then execute npm test.
@@ -74,5 +77,6 @@ Then execute npm test.
 ## Reference
 - goo.gl API reference: https://developers.google.com/url-shortener/v1/getting_started
 - bit.ly API reference: https://dev.bitly.com/links.html
+- tiny.cc API reference: https://tiny.cc/api-docs
  
  
