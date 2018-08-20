@@ -8,6 +8,23 @@ const assert = require("assert");
 
 const expander = require("./../index");
 
+describe("createExpand", async () => {
+    it("should return correct expanded value", async () => {
+        const googl = expander.shorteners.googl(process.env.GOOGL_API_KEY);
+        const bitly = expander.shorteners.bitly(process.env.BITLY_API_KEY);
+        const tinyurl = expander.shorteners.tinyurl();
+        const seomafia = expander.shorteners.seomafia();
+        const isgd = expander.shorteners.isgd();
+        const tinycc = expander.shorteners.tinyurl(process.env.TINYCC_API_LOGIN, process.env.TINYCC_API_KEY);
+
+        const expand = expander.createExpand([googl, bitly, tinyurl, seomafia, isgd, tinycc]);
+
+        const expandedValue = await expand("https://goo.gl/2gj8kB");
+
+        assert.strictEqual(expandedValue, "https://www.vojtechkozak.cz/");
+    });
+});
+
 describe("isMaliciousShortener", () => {
     it("should return false for not malicious shortener", async () => {
         const isMaliciousShortener1 = expander.isMaliciousShortener("https://bit.ly/abc");

@@ -20,7 +20,7 @@ function createExpand(expanders) {
         if (expanders.length === 0) return url;
         const [expnader, ...tail] = _expanders;
 
-        const responseUrl = await expnader.run(url);
+        const responseUrl = await expnader(url);
         if (responseUrl !== url) return responseUrl;
 
         return expand(url, tail)
