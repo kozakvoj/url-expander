@@ -1,4 +1,4 @@
-# URL Expander
+# URL Expander Tool
 
 Promise based URL expander for Node with multiple supported shorteners.
 
