@@ -41,7 +41,7 @@ const bitly = expander.shorteners.bitly("INSERT_API_KEY");
 const tinyurl = expander.shorteners.tinyurl();
 const seomafia = expander.shorteners.seomafia();
 const isgd = expander.shorteners.isgd();
-const tinycc = expander.tinyurl("INSERT_LOGIN", "INSET_API_KEY");
+const tinycc = expander.shorteners.tinyurl("INSERT_LOGIN", "INSET_API_KEY");
 
 const expand = expander.createExpand([googl, bitly, tinyurl, seomafia, isgd, tinycc]);
 
