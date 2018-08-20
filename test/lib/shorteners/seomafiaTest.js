@@ -20,4 +20,10 @@ describe("seomafia.net", () => {
 
         assert.strictEqual(result, "http://www.vojtechkozak.cz");
     });
+
+    it("should return the same url for non-valid seomafia url", async () => {
+        const result = await seomafia("http://seomafia.net/bF6R-xx");
+
+        assert.strictEqual(result, "http://seomafia.net/bF6R-xx");
+    });
 });

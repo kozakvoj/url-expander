@@ -26,6 +26,10 @@ describe("goo.gl", () => {
 
         assert.strictEqual(result, "http://goo.gl/xxxxx");
     });
-});
 
-//http://goo.gl/xxxxx
+    it("should return the same url for non-valid goo.gl url", async () => {
+        const result = await googl("http://goo.gl/xx");
+
+        assert.strictEqual(result, "http://goo.gl/xx");
+    });
+});

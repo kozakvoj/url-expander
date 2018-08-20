@@ -20,4 +20,10 @@ describe("tiny.cc", () => {
 
         assert.strictEqual(result, "http://www.vojtechkozak.cz");
     });
+
+    it("should return the same url for non-valid tiny.cc url", async () => {
+        const result = await tinycc("http://tiny.cc/7fg5wy-xx");
+
+        assert.strictEqual(result, "http://tiny.cc/7fg5wy-xx");
+    });
 });

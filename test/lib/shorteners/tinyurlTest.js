@@ -20,4 +20,10 @@ describe("tinyurl", () => {
 
         assert.strictEqual(result, "http://www.vojtechkozak.cz");
     });
+
+    it("should return the same url for non-valid tinyurl.com url", async () => {
+        const result = await tinyurl("https://tinyurl.com/ycc4x7hn-xx");
+
+        assert.strictEqual(result, "https://tinyurl.com/ycc4x7hn-xx");
+    });
 });

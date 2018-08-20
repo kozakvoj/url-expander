@@ -20,4 +20,10 @@ describe("bitl.ly", () => {
 
         assert.strictEqual(result, "http://www.vojtechkozak.cz");
     });
+
+    it("should return the same url for non-valid bit.ly url", async () => {
+        const result = await bitly("http://bit.ly/2rpKqDx---desde");
+
+        assert.strictEqual(result, "http://bit.ly/2rpKqDx---desde");
+    });
 });

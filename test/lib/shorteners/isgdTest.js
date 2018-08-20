@@ -20,4 +20,10 @@ describe("is.gd", () => {
 
         assert.strictEqual(result, "http://www.vojtechkozak.cz");
     });
+
+    it("should return the same url for non-valid is.gd url", async () => {
+        const result = await isgd("http://is.gd/--");
+
+        assert.strictEqual(result, "http://is.gd/--");
+    });
 });
