@@ -34,13 +34,13 @@ npm install url-expander
 Create expand function with multiple shorteners. All other urls will return the same value.
 
 ```javascript
-const expander = require("url-expander");
+const expander = require("url-expander-tool");
 
-const googl = expander.googl("INSERT_API_KEY");
-const bitly = expander.bitly("INSERT_API_KEY");
-const tinyurl = expander.tinyurl();
-const seomafia = expander.seomafia();
-const isgd = expander.isgd();
+const googl = expander.shorteners.googl("INSERT_API_KEY");
+const bitly = expander.shorteners.bitly("INSERT_API_KEY");
+const tinyurl = expander.shorteners.tinyurl();
+const seomafia = expander.shorteners.seomafia();
+const isgd = expander.shorteners.isgd();
 const tinycc = expander.tinyurl("INSERT_LOGIN", "INSET_API_KEY");
 
 const expand = expander.createExpand([googl, bitly, tinyurl, seomafia, isgd, tinycc]);
@@ -55,9 +55,9 @@ expand("https://www.google.com"); // -> Promise -> https://www.google.com;
 Use only one shortener service.
 
 ```javascript
-const expander = require("url-expander");
+const expander = require("url-expander-tool");
 
-const googl = expander.googl("INSERT_API_KEY");
+const googl = expander.shorteners.googl("INSERT_API_KEY");
 
 googl("https://goo.gl/2gj8kB"); // -> Promise -> http://www.vojtechkozak.cz
 googl("http://bit.ly/gQUgaI"); // -> Promise -> http://bit.ly/gQUgaI
