@@ -16,14 +16,18 @@ const containsShorteners = (shortnenerList, testUrl) => R.find(shortener => url.
 function createExpand(expanders) {
     const _expanders = expanders;
 
-    return async function expand(url) {
+    async function _expand(url, expanders) {
         if (expanders.length === 0) return url;
-        const [expnader, ...tail] = _expanders;
+        const [expnader, ...tail] = expanders;
 
         const responseUrl = await expnader(url);
         if (responseUrl !== url) return responseUrl;
 
-        return expand(url, tail)
+        return _expand(url, tail)
+    }
+
+    return function expand(url) {
+        return _expand(url, _expanders);
     }
 }
 

@@ -20,8 +20,11 @@ describe("createExpand", async () => {
         const expand = expander.createExpand([googl, bitly, tinyurl, seomafia, isgd, tinycc]);
 
         const expandedValue = await expand("https://goo.gl/2gj8kB");
-
         assert.strictEqual(expandedValue, "https://www.vojtechkozak.cz/");
+
+        const expandedValue2 = await expand("http://www.zionmag.org");
+        assert.strictEqual(expandedValue2, "http://www.zionmag.org");
+
     });
 });
 
