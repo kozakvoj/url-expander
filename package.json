@@ -1,6 +1,6 @@
 {
   "name": "url-expander-tool",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "URL exctractor that support multiple services",
   "main": "index.js",
   "directories": {
