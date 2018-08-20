@@ -1,5 +1,5 @@
 {
-  "name": "url-expander",
+  "name": "url-expander-tool",
   "version": "0.0.1",
   "description": "URL exctractor that support multiple services",
   "main": "index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kozakvoj/url-expander.git"
+    "url": "git+https://github.com/kozakvoj/url-expander-tool.git"
   },
   "keywords": [
     "goo.gl",
@@ -22,9 +22,9 @@
   "author": "Vojtech Kozak",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kozakvoj/url-expander/issues"
+    "url": "https://github.com/kozakvoj/url-expander-tool/issues"
   },
-  "homepage": "https://github.com/kozakvoj/url-expander#readme",
+  "homepage": "https://github.com/kozakvoj/url-expander-tool#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
