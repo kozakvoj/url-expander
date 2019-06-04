@@ -10,7 +10,7 @@ const seomafia = require("../lib/shorteners/seomafia")();
 
 describe("seomafia.net", () => {
     it("should resolve to long url", async () => {
-        const result = await seomafia("http://seomafia.net/bF6R");
+        const result = await seomafia("https://seomafia.net/chBp");
 
         assert. strictEqual(result, "https://www.vojtechkozak.cz");
     });
