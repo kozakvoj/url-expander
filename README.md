@@ -11,7 +11,6 @@ This expander can be best used for user generated content validation together wi
 
 Currently, these shorteners are supported:
 
-- Goo.gl - using API
 - Bit.ly - using API
 - Seomafia.net - using API
 - Is.gd - using API
@@ -36,17 +35,15 @@ Create expand function with multiple shorteners. All other urls will return the 
 ```javascript
 const expander = require("url-expander-tool");
 
-const googl = expander.shorteners.googl("INSERT_API_KEY");
 const bitly = expander.shorteners.bitly("INSERT_API_KEY");
 const tinyurl = expander.shorteners.tinyurl();
 const seomafia = expander.shorteners.seomafia();
 const isgd = expander.shorteners.isgd();
 const tinycc = expander.shorteners.tinyurl("INSERT_LOGIN", "INSET_API_KEY");
 
-const expand = expander.createExpand([googl, bitly, tinyurl, seomafia, isgd, tinycc]);
+const expand = expander.createExpand([bitly, tinyurl, seomafia, isgd, tinycc]);
 
 expand("http://bit.ly/gQUgaI"); // -> Promise -> http://bit.ly/bundles/kozakvoj/1
-expand("https://goo.gl/2gj8kB"); // -> Promise -> http://www.vojtechkozak.cz
 expand("https://tinyurl.com/ycc4x7hn"); // -> Promise -> https://www.vojtechkozak.cz;
 expand("https://www.google.com"); // -> Promise -> https://www.google.com;
 ```
@@ -57,17 +54,15 @@ Use only one shortener service.
 ```javascript
 const expander = require("url-expander-tool");
 
-const googl = expander.shorteners.googl("INSERT_API_KEY");
+const bitly = expander.shorteners.bitly("INSERT_API_KEY");
 
-googl("https://goo.gl/2gj8kB"); // -> Promise -> http://www.vojtechkozak.cz
-googl("http://bit.ly/gQUgaI"); // -> Promise -> http://bit.ly/gQUgaI
+bitly("http://bit.ly/gQUgaI"); // -> Promise -> http://www.vojtechkozak.cz
 ```
 
 ## Testing
 In order to test the expander, you have to crate a .env file inside /test directory. This file has to contain all API keys for the shortener services.
 
  ```
-GOOGL_API_KEY=
 BITLY_API_KEY=
 TINYCC_API_KEY=
 TINYCC_API_LOGIN=
@@ -76,7 +71,6 @@ TINYCC_API_LOGIN=
 Then execute npm test.
 
 ## Reference
-- goo.gl API reference: https://developers.google.com/url-shortener/v1/getting_started
 - bit.ly API reference: https://dev.bitly.com/links.html
 - seomafia.net API reference: http://seomafia.net/developer.html
 - is.gd API reference: https://is.gd/apishorteningreference.php

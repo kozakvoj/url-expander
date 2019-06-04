@@ -1,12 +1,12 @@
 'use strict';
 
-require("../../init");
+require("./init");
 
 const describe = require("mocha").describe;
 const it = require("mocha").it;
 const assert = require("assert");
 
-const bitly = require("../../../lib/shorteners/bitly")(process.env.BITLY_API_KEY);
+const bitly = require("../lib/shorteners/bitly")(process.env.BITLY_API_KEY);
 
 describe("bitl.ly", () => {
     it("should resolve to long url", async () => {

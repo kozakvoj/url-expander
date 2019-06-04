@@ -1,12 +1,12 @@
 'use strict';
 
-require("../../init");
+require("./init");
 
 const describe = require("mocha").describe;
 const it = require("mocha").it;
 const assert = require("assert");
 
-const tinycc = require("../../../lib/shorteners/tinycc")(process.env.TINYCC_API_LOGIN, process.env.TINYCC_API_KEY);
+const tinycc = require("../lib/shorteners/tinycc")(process.env.TINYCC_API_LOGIN, process.env.TINYCC_API_KEY);
 
 describe("tiny.cc", () => {
     it("should resolve to long url", async () => {

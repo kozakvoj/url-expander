@@ -2,7 +2,6 @@
 
 const R = require("ramda");
 
-const googl = require("./lib/shorteners/googl");
 const bitly = require("./lib/shorteners/bitly");
 const tinyurl = require("./lib/shorteners/tinyurl");
 const seomafia = require("./lib/shorteners/seomafia");
@@ -37,6 +36,6 @@ module.exports = {
     isSafeShortener: url => containsShorteners(require("./resources/safeShorteners"), url),
     createExpand,
     shorteners: {
-        googl, bitly, tinyurl, seomafia, isgd, tinycc
+        bitly, tinyurl, seomafia, isgd, tinycc
     }
 };

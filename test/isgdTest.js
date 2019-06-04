@@ -1,12 +1,12 @@
 'use strict';
 
-require("../../init");
+require("./init");
 
 const describe = require("mocha").describe;
 const it = require("mocha").it;
 const assert = require("assert");
 
-const isgd = require("../../../lib/shorteners/isgd")();
+const isgd = require("../lib/shorteners/isgd")();
 
 describe("is.gd", () => {
     it("should resolve to long url", async () => {
